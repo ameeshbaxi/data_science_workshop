@@ -11783,8 +11783,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Approach">Approach<a class="anchor-link" href="#Approach">&#182;</a></h3><h4 id="Data-Set">Data-Set<a class="anchor-link" href="#Data-Set">&#182;</a></h4><p>For this assignment purpose, the dataset will be used from <a href="https://www.kaggle.com/c/avazu-ctr-prediction/">Kaggle Competition</a>. Mostlikely, the same challenge will be capstone project as well.</p>
-<h4 id="Database">Database<a class="anchor-link" href="#Database">&#182;</a></h4><p>The training data base is access of <strong>6Gb</strong> when unzipped. To start with this for exercise, the data in csv will be converted into sqlite database and sql queries will be used for exploration purpose. Please see <strong>csv_to_sql.ipynb</strong> notebook which converts csv into sqlite database. For this story notebook, the data-set is converted into database format.</p>
-<h3 id="What-I-am-looking-for?">What I am looking for?<a class="anchor-link" href="#What-I-am-looking-for?">&#182;</a></h3><p>This data-set contains data around an ad is being clicked or not for the purpose of predicting Click-Through-Rate (CTR). For predicting CTR, the first step would be to workout the features impacting CTR. This exercise will pick a column of the data-set one by one and workout if a particular element in data-set affects CTR or not. This gives insight into the data-set and helps with the modelling and co-relating the machine learning model to the data-set.</p>
+<h4 id="Database">Database<a class="anchor-link" href="#Database">&#182;</a></h4><p>The training data base is in access of <strong>6Gb</strong> when unzipped. For this exercise, the data in csv will be converted into sqlite database and sql queries will be used for exploration purpose. Please see <strong>csv_to_sql.ipynb</strong> notebook which converts csv into sqlite database. For this story notebook, the data-set is already converted into database format.</p>
+<h3 id="What-I-am-looking-for?">What I am looking for?<a class="anchor-link" href="#What-I-am-looking-for?">&#182;</a></h3><p>This data-set contains data around an ad being clicked or not for the purpose of predicting Click-Through-Rate (CTR). For predicting CTR, the first step would be to workout the features impacting CTR. This exercise will pick a column of the data-set one by one and workout if a particular element in data-set affects CTR or not. This gives an insight into the data-set and helps with the modelling and co-relating the machine learning model to the data-set.</p>
 
 </div>
 </div>
@@ -11962,7 +11962,7 @@ Index([&#39;index&#39;, &#39;id&#39;, &#39;click&#39;, &#39;hour&#39;, &#39;C1&#
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exploration---1:-Click-Through-Rate-(CTR)">Exploration - 1: Click Through Rate (CTR)<a class="anchor-link" href="#Exploration---1:-Click-Through-Rate-(CTR)">&#182;</a></h3><p>As soon as data-set is present, the first question comes in mind is what is CTR for this data-set. From the data-set it appears that when one or more ads are clicked, the click_count column is more than 0 and when there an ad is not clicked, the click_count is zero.</p>
+<h3 id="Exploration---1:-Click-Through-Rate-(CTR)">Exploration - 1: Click Through Rate (CTR)<a class="anchor-link" href="#Exploration---1:-Click-Through-Rate-(CTR)">&#182;</a></h3><p>As soon as someone starts playing with the data-set, the first question that comes in mind is - what is CTR for this data-set? From the data-set it appears that when one or more ads are clicked, the click_count column is more than 0 and when an ad is not clicked, the click_count is zero.</p>
 <p>The ratio of total entries with postive click_count (click_cout &gt; 0) to total entries in data-set will determine <strong>CTR</strong>.</p>
 
 </div>
@@ -12116,7 +12116,7 @@ Index([&#39;index&#39;, &#39;id&#39;, &#39;click&#39;, &#39;hour&#39;, &#39;C1&#
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9720df0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9f9c570&gt;</pre>
 </div>
 
 </div>
@@ -12610,7 +12610,7 @@ RU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the graph above, the day of week matters for converting the clicks. It seems busier by 3x over the middle of the week (Tuesday, Wednesday, and Thursday). Tuesday seems the busiest of lot!</p>
+<p>From the graph above, the day of week matters for converting the clicks. It seems busier by 3x over the middle of the week (Tuesday, Wednesday, and Thursday). Tuesday seems the busiest of the lot!</p>
 
 </div>
 </div>
@@ -12674,7 +12674,7 @@ RU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x96f2f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1245530&gt;</pre>
 </div>
 
 </div>
@@ -13192,7 +13192,7 @@ IiKN8X8LUjdHWiQjkAAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xefd410&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x13c1410&gt;</pre>
 </div>
 
 </div>
@@ -13556,7 +13556,7 @@ TkKmEEIIIYSYdhIyhRBCCCHEtJOQKYQQQgghpp2ETCGEEEIIMe0kZAohhBBCiGknIVMIIYQQQky7
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Analysis:">Analysis:<a class="anchor-link" href="#Analysis:">&#182;</a></h4><p>Since on the busiest day of the week, the <strong>CTR</strong> is similar or slightly lower than <strong>CTR</strong> of the whole database, the day of the week is not really feature affecting the <strong>CTR</strong>!</p>
+<h4 id="Analysis:">Analysis:<a class="anchor-link" href="#Analysis:">&#182;</a></h4><p>On the busiest day of the week, the <strong>CTR</strong> is similar or slightly lower than <strong>CTR</strong> of the whole database, the day of the week is not really a feature affecting the <strong>CTR</strong>!</p>
 
 </div>
 </div>
@@ -13620,7 +13620,7 @@ TkKmEEIIIYSYdhIyhRBCCCHEtJOQKYQQQgghpp2ETCGEEEIIMe0kZAohhBBCiGknIVMIIYQQQky7
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf2edf0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x13f1a90&gt;</pre>
 </div>
 
 </div>
@@ -14133,7 +14133,7 @@ HKcTY4IAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf9fab0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1478f90&gt;</pre>
 </div>
 
 </div>
@@ -14509,7 +14509,7 @@ PnBzSxLYAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x99caab0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1406670&gt;</pre>
 </div>
 
 </div>
@@ -14796,7 +14796,7 @@ AwAAAOsomQAAALCOkgkAAADrKJkAAACwjpIJAAAA6yiZAAAAsI6SCQAAAOsomQAAALCOkgkAAADr
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Analysis:">Analysis:<a class="anchor-link" href="#Analysis:">&#182;</a></h3><p>Since the distribution and the mean success rate through out the day is the similar to CTR for the whole data-set, <strong>the time of the day</strong> is <strong>not the feature</strong> affecting <strong>the CTR</strong>.</p>
+<h3 id="Analysis:">Analysis:<a class="anchor-link" href="#Analysis:">&#182;</a></h3><p>Since the distribution and the mean success rate through out the day is the similar to CTR for the whole data-set, <strong>the time of the day</strong> is <strong>not a feature</strong> affecting <strong>the CTR</strong>.</p>
 
 </div>
 </div>
@@ -14861,7 +14861,7 @@ AwAAAOsomQAAALCOkgkAAADrKJkAAACwjpIJAAAA6yiZAAAAsI6SCQAAAOsomQAAALCOkgkAAADr
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9a3add0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1881dd0&gt;</pre>
 </div>
 
 </div>
@@ -15246,7 +15246,7 @@ SUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9a3a610&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x18d1770&gt;</pre>
 </div>
 
 </div>
@@ -15729,7 +15729,7 @@ RERERIrCApeIiIiIFIUFLhEREREpCgtcIiIiIlKU/wfiCFSEjDCpvgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9b3e6b0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x18dfd10&gt;</pre>
 </div>
 
 </div>
@@ -16021,7 +16021,7 @@ pRMAAADmKJ0AAAAwR+kEAACAOUonAAAAzFE6AQAAYI7SCQAAAHOUTgAAAJijdAIAAMAcpRMAAADm
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">% e</span><span class="s2">ntries with C1 == 1005: </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">click_hit</span> <span class="o">+</span> <span class="n">click_miss</span><span class="p">)</span> <span class="o">/</span> <span class="n">clk_total</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Click-Through-Rate when C1 == 1005: </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio</span><span class="p">))</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Click-Through-Rate for the whole data set: </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_rate</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;From the above data, it seems that C1 is not feature affecting CTR&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;From the above data, it seems that C1 is not a feature affecting CTR&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -16039,7 +16039,7 @@ Total entries with C1 != 1005: 3288335
 % entries with C1 == 1005: 91.87%
 Click-Through-Rate when C1 == 1005: 16.93%
 Click-Through-Rate for the whole data set: 16.98%
-From the above data, it seems that C1 is not feature affecting CTR
+From the above data, it seems that C1 is not a feature affecting CTR
 </pre>
 </div>
 </div>
@@ -16089,7 +16089,7 @@ From the above data, it seems that C1 is not feature affecting CTR
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pos</span> <span class="o">=</span> <span class="n">clk_grp_sg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;site_category&#39;</span><span class="p">)</span>
@@ -16104,11 +16104,11 @@ From the above data, it seems that C1 is not feature affecting CTR
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc1aeeb0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9630dd0&gt;</pre>
 </div>
 
 </div>
@@ -16858,7 +16858,7 @@ QgjpNij5JYQQQggh3cb/AfgwhwD9Ws/gAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_neg</span> <span class="o">=</span> <span class="n">clk_grp_sg_neg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;site_category&#39;</span><span class="p">)</span>
@@ -16873,11 +16873,11 @@ QgjpNij5JYQQQggh3cb/AfgwhwD9Ws/gAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x8e0e750&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x973f4f0&gt;</pre>
 </div>
 
 </div>
@@ -17678,7 +17678,7 @@ YRiGYRiGERyrdDIMwzAMwzCCY5VOhmEYhmEYRnD/AwDZVAiX12avAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa441cb0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x967be30&gt;</pre>
 </div>
 
 </div>
@@ -18427,7 +18427,7 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>Clearly, from above chart, it can be observed that certain site categories are more successfull than other. <strong>Site Catrgory</strong> can be feature that can impact the <strong>CTR</strong>!!</p>
+<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>Clearly, from above chart, it can be observed that certain site categories are more successfull than the other. <strong>Site Catrgory</strong> can be a feature that can impact the <strong>CTR</strong>!</p>
 
 </div>
 </div>
@@ -18437,7 +18437,7 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Defining-Some-Generic-Functions">Defining Some Generic Functions<a class="anchor-link" href="#Defining-Some-Generic-Functions">&#182;</a></h3><p>From the above analysis, there is a pattern and a couple of generic functios could make the a bit faster.</p>
+<h3 id="Defining-Some-Generic-Functions">Defining Some Generic Functions<a class="anchor-link" href="#Defining-Some-Generic-Functions">&#182;</a></h3><p>From the above analysis, there is a pattern in accessing the queries. A couple of generic functions can be developed to make this analysis process a bit faster.</p>
 
 </div>
 </div>
@@ -18483,7 +18483,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">_get_click_count_query</span><span class="p">(</span><span class="s1">&#39;banner_pos&#39;</span><span class="p">)</span>
@@ -18506,7 +18506,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pos</span> <span class="o">=</span> <span class="n">clk_grp_pos</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;banner_pos&#39;</span><span class="p">)</span>
@@ -18521,11 +18521,11 @@ YII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xab16e70&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9800bf0&gt;</pre>
 </div>
 
 </div>
@@ -18814,7 +18814,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">_get_click_count_query</span><span class="p">(</span><span class="s1">&#39;banner_pos&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -18837,7 +18837,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_neg</span> <span class="o">=</span> <span class="n">clk_grp_neg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;banner_pos&#39;</span><span class="p">)</span>
@@ -18852,11 +18852,11 @@ TkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xab506f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9674830&gt;</pre>
 </div>
 
 </div>
@@ -19099,7 +19099,7 @@ RCcAAACMIzoBAABgHNEJAAAA44hOAAAAGEd0AgAAwLj/Dx2milcqdZ+SAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_percent</span> <span class="o">=</span> <span class="n">_data_percentage</span><span class="p">(</span><span class="n">data_pos</span><span class="p">,</span> <span class="n">data_neg</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -19350,7 +19350,7 @@ ZzPsiAntAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pos</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">data_neg</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -19364,7 +19364,7 @@ ZzPsiAntAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -19382,7 +19382,7 @@ ZzPsiAntAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>Since most of the ads are placed with banner_pos 0 and 1, and the CTR for these banner positions is similar to the whole data-set, banner_pos is <strong>not a feature affecting</strong> the <strong>CTR</strong>. The banner_pos 7 has twice as much success. However, it features only in <strong>43577</strong> rows which is fraction of 40 millions+ rows.</p>
+<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>Since most of the ads are placed with banner_pos 0 and 1, and the CTR for these banner positions is similar to the whole data-set, banner_pos is <strong>not a feature affecting</strong> the <strong>CTR</strong>. The banner_pos 7 has twice as much success. However, it features only in <strong>43577</strong> rows which is a fraction of 40 millions+ rows.</p>
 
 </div>
 </div>
@@ -19398,7 +19398,7 @@ ZzPsiAntAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#features = [&#39;app_category&#39;, &#39;device_id&#39;, &#39;device_ip&#39;, &#39;device_model&#39;, &#39;device_type&#39;,</span>
@@ -19433,7 +19433,7 @@ ZzPsiAntAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features_pos</span><span class="p">[</span><span class="s1">&#39;app_category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
@@ -19447,11 +19447,11 @@ ZzPsiAntAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc188e50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc4f5610&gt;</pre>
 </div>
 
 </div>
@@ -20288,7 +20288,7 @@ MBgMBuO94f8BczXwnzH2JjgAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features_neg</span><span class="p">[</span><span class="s1">&#39;app_category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
@@ -20302,11 +20302,11 @@ MBgMBuO94f8BczXwnzH2JjgAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[41]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc1f9af0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc57d3d0&gt;</pre>
 </div>
 
 </div>
@@ -21205,7 +21205,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features_percent</span><span class="p">[</span><span class="s1">&#39;app_category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
@@ -21219,11 +21219,11 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[48]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc58b530&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc61c350&gt;</pre>
 </div>
 
 </div>
@@ -22136,7 +22136,7 @@ H2ARZ6Qgzj6aAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>The app_category plot is in a mix bag. Certain app_category does not have any positive click_count. They appear in table when click_count is zero but not when click_count is more than zero. Also, certain app_category sees higher CTR rate compared to other types of app_category. With this observations, it can be concluded that <strong>app_catrgory</strong> could be a feature affecting <strong>CTR</strong>.</p>
+<h4 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h4><p>The app_category plot is in a mix bag. Certain app_category does not have any positive click_count. They appear in table when click_count is zero but not when click_count is more than zero. Also, certain app_category sees higher CTR rate compared to other types of app_category. With these observations, it can be concluded that <strong>app_catrgory</strong> could be a feature affecting <strong>CTR</strong>.</p>
 
 </div>
 </div>
@@ -22146,7 +22146,7 @@ H2ARZ6Qgzj6aAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Furture-Work">Furture Work<a class="anchor-link" href="#Furture-Work">&#182;</a></h3><p>The other column types like device_type, device_conn_type and other coefficients could also be analysted in similar manner and see their trend on CTR. Also, click_count data could be zoomed in when click_count is not zero. A particular IP, device could have higher impact on CTR or skewing it.</p>
+<h3 id="Furture-Work">Furture Work<a class="anchor-link" href="#Furture-Work">&#182;</a></h3><p>The other column types like device_type, device_conn_type and other coefficients could also be analysted in similar manner to see their trend on CTR. Also, click_count data could be zoomed in when click_count is not zero. A particular IP, device could have higher impact on CTR or they could be skewing its value.</p>
 
 </div>
 </div>
