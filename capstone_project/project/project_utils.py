@@ -246,3 +246,16 @@ def plot_distribution(Xdata, ydata, clf, predicted=True, title=None):
     plt.legend()
     plt.show()
 
+def pos_neg_ratio(df):
+    num_pos = df[df.click > 0].count()[0]
+    num_neg = df[df.click == 0].count()[0]
+    return ((num_pos / num_neg), num_pos, num_neg)
+
+
+def calculate_test_ctr(df_test, yTEST):
+    df_test['click'] = yTEST
+    neg_predict = len(df_test[df_test.click ==0].index)
+    pos_predict = len(df_test[df_test.click >0].index)
+    ctr_test = (pos_predict * 100.0) / (pos_predict + neg_predict)
+    return ctr_test
+
