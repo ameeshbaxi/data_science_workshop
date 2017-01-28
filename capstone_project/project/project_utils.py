@@ -6,6 +6,7 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.calibration import calibration_curve
+from IPython.display import display, HTML
 import seaborn as sns
 sns.set_style("whitegrid")
 sns.set_context("poster")
@@ -228,7 +229,7 @@ def plot_sample(sample_df):
     plt.show()
     
 
-def plot_distribution(Xdata, ydata, clf, predicted=True, title=None):
+def plot_distribution(Xdata, ydata, clf, predicted=True, title=None, anchor_name=None):
     pca = PCA(n_components=2)
     transformed = pca.fit_transform(Xdata)
     df = pd.DataFrame(index=range(len(Xdata)))
@@ -244,6 +245,10 @@ def plot_distribution(Xdata, ydata, clf, predicted=True, title=None):
     if title is not None:
         sns.plt.title(title)
     plt.legend()
+    
+    if anchor_name is not None:
+        display(HTML('<a id="%s"></a>' % anchor_name))
+
     plt.show()
 
 def pos_neg_ratio(df):
@@ -259,3 +264,11 @@ def calculate_test_ctr(df_test, yTEST):
     ctr_test = (pos_predict * 100.0) / (pos_predict + neg_predict)
     return ctr_test
 
+def get_anchor_name(c_name, d_name, predicted=False):
+    a_name = c_name + '_' + d_name
+    if predicted:
+        a_name = a_name + '_p'
+    else:
+        a_name = a_name + '_a'
+    
+    return a_name
